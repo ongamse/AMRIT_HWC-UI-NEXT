@@ -32,16 +32,9 @@ jobs:
           node-version: 16
  
           
-    - name: Build with NPM and  Create WAR file 
+    - name: Build with NPM
       run: |
-            npm config set legacy-peer-deps true
-            npm install -g @angular/cli
-            npm install -g grunt-cli
-            npm install typescript@2.7.2 --save-dev
-            npm install ng2-smart-table@1.2.1
-            npm install node-sass --force
-            npm install --force
-            npm run ng build --prod --aot && grunt
+            npm run ng build
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
