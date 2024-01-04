@@ -32,9 +32,9 @@ jobs:
           node-version: 16
  
           
-    - name: Build with NPM
-      run: |
-            ng build
+    #- name: Build with NPM
+     # run: |
+      #      ng build
             #npm install
             #npm run build
     - name: Download ShiftLeft CLI
